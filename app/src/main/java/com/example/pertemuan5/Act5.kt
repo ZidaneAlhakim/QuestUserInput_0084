@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Button
@@ -120,7 +121,14 @@ fun FormDataDiri(modifier: Modifier) {
             modifier = Modifier
                 .height(100.dp)
                 .width(300.dp)
-        ) { }
+        ) {
+            Column (modifier = Modifier.padding(horizontal = 5.dp,
+                vertical = 15.dp)) {
+                Text(text = "nama : $name", color = Color.White)
+                Text(text = "Gender : $gender", color = Color.White)
+                Text(text = "Alamat : $alamat", color = Color.White)
+            }
+        }
     }
 }
 
